@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class ProductRepository implements Repository<Product>{
+public class ProductRepository implements Repository<Product> {
 
     private Long idCounter = 0L;
     private final Map<Long, Product> repository;
@@ -17,7 +17,12 @@ public class ProductRepository implements Repository<Product>{
 
     @Override
     public Long save(Product entity) {
-        return null;
+        idCounter++;
+
+        entity.setId(idCounter);
+        repository.put(idCounter, entity);
+
+        return idCounter;
     }
 
     @Override
@@ -27,11 +32,11 @@ public class ProductRepository implements Repository<Product>{
 
     @Override
     public Product findById(Long id) {
-        return null;
+        return repository.get(id);
     }
 
     @Override
     public void delete(Long id) {
-
+        repository.remove(id);
     }
 }
