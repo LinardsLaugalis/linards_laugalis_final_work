@@ -17,11 +17,15 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.springframework:spring-context:5.3.6'
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
     testImplementation 'junit:junit:4.13'
-    testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.8.0'
+    testImplementation 'org.mockito:mockito-core:3.8.0'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
 }
 
 application {
     // Define the main class for the application.
-    mainClass = 'lv.lu.finalwork.App'
+    mainClass = 'lv.lu.finalwork.ProductAccountingApplication'
 }

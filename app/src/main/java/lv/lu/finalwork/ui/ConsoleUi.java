@@ -2,13 +2,18 @@ package lv.lu.finalwork.ui;
 
 import lv.lu.finalwork.model.ProductInputData;
 import lv.lu.finalwork.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 import java.util.Scanner;
 
+@Controller
 public class ConsoleUi {
+
     private final ProductService productService;
     private final Scanner scanner;
 
+    @Autowired
     public ConsoleUi(ProductService productService, Scanner scanner) {
         this.productService = productService;
         this.scanner = scanner;
