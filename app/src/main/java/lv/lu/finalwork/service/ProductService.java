@@ -1,7 +1,7 @@
 package lv.lu.finalwork.service;
 
-import lv.lu.finalwork.model.Product;
-import lv.lu.finalwork.model.ProductCategory;
+import lv.lu.finalwork.domain.Product;
+import lv.lu.finalwork.domain.ProductCategory;
 import lv.lu.finalwork.model.ProductData;
 import lv.lu.finalwork.model.ProductInputData;
 import lv.lu.finalwork.repository.Repository;
@@ -18,8 +18,8 @@ public class ProductService {
     private final Repository<Product> productRepository;
 
     @Autowired
-    public ProductService(Repository<Product> productRepository) {
-        this.productRepository = productRepository;
+    public ProductService(Repository<Product> productOrmRepository) {
+        this.productRepository = productOrmRepository;
     }
 
     public void save(ProductInputData productData) {
