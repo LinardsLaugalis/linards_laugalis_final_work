@@ -4,7 +4,7 @@ import lv.lu.finalwork.model.Product;
 import lv.lu.finalwork.model.ProductCategory;
 import lv.lu.finalwork.model.ProductData;
 import lv.lu.finalwork.model.ProductInputData;
-import lv.lu.finalwork.repository.ProductRepository;
+import lv.lu.finalwork.repository.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,10 +15,10 @@ import java.util.stream.Collectors;
 @Service
 public class ProductService {
 
-    private final ProductRepository productRepository;
+    private final Repository<Product> productRepository;
 
     @Autowired
-    public ProductService(ProductRepository productRepository) {
+    public ProductService(Repository<Product> productRepository) {
         this.productRepository = productRepository;
     }
 
