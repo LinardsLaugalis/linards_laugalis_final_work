@@ -2,6 +2,7 @@ package lv.lu.finalwork.service;
 
 import lv.lu.finalwork.domain.Product;
 import lv.lu.finalwork.domain.ProductCategory;
+import lv.lu.finalwork.domain.ProductCrudRepository;
 import lv.lu.finalwork.model.ProductInputData;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,7 +21,7 @@ public class ProductServiceTest {
     private ProductService service;
 
     @Mock
-    private Repository<Product> repositoryMock;
+    private ProductCrudRepository repositoryMock;
 
     @Test
     public void shouldConvertAndStoreProductData() {
