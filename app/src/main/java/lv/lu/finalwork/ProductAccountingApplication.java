@@ -9,7 +9,6 @@ public class ProductAccountingApplication {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfiguration.class);
 
-
         context.getBean(ConsoleUi.class).run();
     }
 }
